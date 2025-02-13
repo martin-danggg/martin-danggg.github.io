@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hệ Thống Theo Dõi Sức Khỏe Cá Nhân</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Arial', sans-serif; }
+        body { 
+            background-color: #f0f9ff; 
+            background-image: url('https://elcom.com.vn/storage/uploads/images/utP917Anruv5Ek3rCDwUq4BLHT0l3JaO1YQZdLCh.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            position: relative;
+        }
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.7); /* Làm mờ ảnh nền */
+            z-index: -1;
+        }
+        header { background-color: #2a9d8f; color: white; padding: 1.5rem; text-align: center; }
+        nav { background-color: #264653; padding: 1rem; }
+        nav ul { list-style: none; display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; }
+        nav a { color: white; text-decoration: none; padding: 0.5rem 1rem; border-radius: 5px; transition: all 0.3s; }
+        nav a:hover { background-color: #2a9d8f; }
+        .health-dashboard { padding: 2rem; max-width: 1200px; margin: 0 auto; position: relative; z-index: 1; }
+        .welcome-section, .about-section, .mission-section, .achievements-section {
+            background: rgba(255, 255, 255, 0.9); /* Làm mờ nền các section */
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            margin: 2rem 0;
+        }
+        .welcome-section h2, .about-section h2, .mission-section h2, .achievements-section h2 {
+            color: #2a9d8f;
+            margin-bottom: 1.5rem;
+        }
+        .achievements-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            text-align: center;
+        }
+        .achievement-card {
+            background: #e9f5f4;
+            padding: 1.5rem;
+            border-radius: 10px;
+        }
+        .achievement-card h3 {
+            color: #2a9d8f;
+            margin-bottom: 0.5rem;
+        }
+        footer {
+            background-color: rgba(38, 70, 83, 0.9); /* Làm mờ nền footer */
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            margin-top: 3rem;
+            position: relative;
+            z-index: 1;
+        }
+        .footer-content {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        .footer-content div {
+            max-width: 300px;
+        }
+        .footer-content h3 {
+            color: #2a9d8f;
+            margin-bottom: 1rem;
+        }
+        .color-white {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>HỆ THỐNG THEO DÕI SỨC KHỎE CÁ NHÂN</h1>
+        <p>Quản lý sức khỏe thông minh - Dự phòng bệnh tật hiệu quả</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#dashboard"><i class="fas fa-home"></i> Trang chủ</a></li>
+            <li><a href="./theodoisuckhoe.html"><i class="fas fa-heartbeat"></i> Theo dõi sức khỏe</a></li>
+            <li><a href="./benhthuonggap.html"><i class="fas fa-file-medical"></i> Bệnh thường gặp</a></li>
+            <li><a href="./diendan.html"><i class="fas fa-comments"></i> Diễn đàn</a></li>
+            <li><a href="./lienhe.html"><i class="fas fa-book-medical"></i> Liên hệ</a></li>
+        </ul>
+    </nav>
+
+    <main class="health-dashboard">
+        <!-- Phần chào mừng -->
+        <section class="welcome-section">
+            <h2><i class="fas fa-handshake"></i> CHÀO MỪNG BẠN ĐẾN VỚI HỆ THỐNG THEO DÕI SỨC KHỎE CÁ NHÂN</h2>
+            <p>Chúng tôi tự hào là một trong những hệ thống theo dõi sức khỏe hàng đầu, giúp bạn quản lý và cải thiện sức khỏe một cách hiệu quả. Với công nghệ tiên tiến và đội ngũ chuyên gia giàu kinh nghiệm, chúng tôi cam kết mang đến cho bạn những giải pháp sức khỏe tốt nhất.</p>
+        </section>
+
+        <!-- Phần giới thiệu về trang web -->
+        <section class="about-section">
+            <h2><i class="fas fa-info-circle"></i> GIỚI THIỆU VỀ TRANG WEB</h2>
+            <p>Hệ Thống Theo Dõi Sức Khỏe Cá Nhân là nền tảng trực tuyến giúp bạn theo dõi và quản lý sức khỏe một cách toàn diện. Chúng tôi cung cấp các công cụ theo dõi sức khỏe, thông tin về bệnh thường gặp, và diễn đàn hỏi đáp với các chuyên gia y tế.</p>
+        </section>
+
+        <!-- Phần ý nghĩa và sứ mệnh -->
+        <section class="mission-section">
+            <h2><i class="fas fa-bullseye"></i> Ý NGHĨA VÀ SỨ MỆNH</h2>
+            <p>Sứ mệnh của chúng tôi là giúp mọi người có thể dễ dàng tiếp cận và quản lý sức khỏe của mình một cách hiệu quả. Chúng tôi tin rằng sức khỏe là tài sản quý giá nhất, và việc theo dõi sức khỏe thường xuyên sẽ giúp bạn phòng ngừa bệnh tật và sống một cuộc sống hạnh phúc hơn.</p>
+        </section>
+
+        <!-- Phần thành tích -->
+        <section class="achievements-section">
+            <h2><i class="fas fa-trophy"></i> THÀNH TÍCH CỦA CHÚNG TÔI</h2>
+            <div class="achievements-grid">
+                <div class="achievement-card">
+                    <h3>95%</h3>
+                    <p>Người dùng hài lòng</p>
+                </div>
+                <div class="achievement-card">
+                    <h3>500,000+</h3>
+                    <p>Người dùng đăng ký</p>
+                </div>
+                <div class="achievement-card">
+                    <h3>98%</h3>
+                    <p>Độ chính xác trong theo dõi sức khỏe</p>
+                </div>
+                <div class="achievement-card">
+                    <h3>24/7</h3>
+                    <p>Hỗ trợ khách hàng</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Phần footer -->
+    <footer>
+        <div class="footer-content">
+            <div>
+                <h3>Hệ Thống Theo Dõi Sức Khỏe Cá Nhân</h3>
+                <p>Địa chỉ: 123 Đường Lê Thánh Tôn, Quận Thuận Hóa, Thành phố Huế, Việt Nam</p>
+                <p>Email: support@theodoisuckhoe.com</p>
+                <p>Điện thoại: 093 478 2395</p>
+            </div>
+            <div>
+                <h3>Liên kết nhanh</h3>
+                <ul>
+                    <li><a href="./index.html" style = "color:#f0f9ff">Trang chủ</a></li>
+                    <li><a href="./theodoisuckhoe.html" style = "color:#f0f9ff">Theo dõi sức khỏe</a></li>
+                    <li><a href="./benhthuonggap.html" style = "color:#f0f9ff">Bệnh thường gặp</a></li>
+                    <li><a href="./diendan.html" style = "color:#f0f9ff">Diễn đàn</a></li>
+                    <li><a href="./lienhe.html" style = "color:#f0f9ff">Liên hệ</a></li>
+                </ul>
+            </div>
+        </div>
+        <p>&copy; 2025 Hệ Thống Theo Dõi Sức Khỏe Cá Nhân. All rights reserved.</p>
+    </footer>
+       <!-- Histats.com  (div with counter) --><div id="histats_counter"></div>
+<!-- Histats.com  START  (aync)-->
+    <script type="text/javascript">var _Hasync= _Hasync|| [];
+        _Hasync.push(['Histats.start', '1,4928715,4,8,210,40,00011111']);
+        _Hasync.push(['Histats.fasi', '1']);
+        _Hasync.push(['Histats.track_hits', '']);
+        (function() {
+        var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
+        hs.src = ('//s10.histats.com/js15_as.js');
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
+        })();</script>
+        <noscript><a href="/" target="_blank"><img  src="//sstatic1.histats.com/0.gif?4928715&101" alt="" border="0"></a></noscript>
+        <!-- Histats.com  END  -->
+</body>
+</html>
+
